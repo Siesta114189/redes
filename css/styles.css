@@ -1,0 +1,328 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la pantalla */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.imagenes {
+    width: 450px;
+    height: 250px;
+}
+
+header {
+    background: #58ce5a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.1rem;
+    height: 60px;
+}
+
+.logo-img {
+    width: 75px;
+    height: 80px;
+    
+}
+
+
+.enlaces-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.enlaces-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.enlaces-nav a:hover {
+    transform: scale(1.1);
+    color: rgb(195, 55, 55);
+}
+
+
+
+
+
+
+
+/*Formulario*/
+main {
+    flex: 1; /* Asegura que el contenido ocupe el espacio restante */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.campo {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-size: 1rem;
+}
+
+.campo input, .campo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+
+
+
+
+
+
+/*Efectos del boton*/
+
+/* Estilo inicial del botón */
+.btn-enviar {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.5); /* Sombra suave */
+}
+
+/* Efecto al pasar el cursor por encima */
+.btn-enviar:hover {
+    background-color: #16a085; /* Cambio de color */
+    transform: scale(1.1); /* Aumento de tamaño */
+    box-shadow: 0 0 20px rgba(26, 188, 156, 0.8); /* Sombra más fuerte */
+}
+
+/* Efecto de "pulse" (pulsación) al hacer clic */
+.btn-enviar:active {
+    transform: scale(0.95); /* El botón se reduce un poco al hacer clic */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.6); /* Sombra más suave */
+}
+
+/* Animación de entrada al cargar la página */
+.btn-enviar {
+    animation: animacionBoton 1s ease-out forwards;
+}
+
+/* Definir la animación de entrada */
+@keyframes animacionBoton {
+    0% {
+        transform: scale(0); /* Comienza pequeño */
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1); /* Se agranda un poco */
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1); /* Se ajusta al tamaño original */
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+footer {
+    background: #58ce5a;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* Añadido para mayor espacio entre contenido y footer */
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+/*TAmaño del icono de la red*/
+.icono-red img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* efecto de acercamiento*/
+.icono-red:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+footer {
+    margin-top: auto; /* Para que el footer se quede al final de la página */
+}
+
+
+
+
+
+
+
+/* Para el Grid del index*/
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(3, auto);  /* Tres filas */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.item-grid {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+/*Tamaño de las imagenes*/
+.item-grid img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* Para el Grid de soluciones*/
+.contenedor-grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, auto);  /* Tres filas */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.item-grid3 {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+/*Tamaño de las imagenes*/
+.item-grid3 img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+/*Pagina imapcto*/
+.contenedor-grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(1, auto);  /* Una fila */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.item-grid2 {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-grid2 img {
+    width: 35%;
+    max-width: 250px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+/*PARA LA PAGINA IMPACTO AMBIENTAL*/
+/*Forma lado izquierdo*/
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 0.8fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/*Hacer interlineado*/
+.navegador ul li {
+    margin: 10px 0;
+}
+/*Color de texto lado izquierdo*/
+.navegador ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 18px;
+}
+/*Resaltado del texto izquierdo*/
+.navegador ul li a:hover {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/*Contonrno lado derecho*/
+.contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
